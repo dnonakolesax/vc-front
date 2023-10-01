@@ -1,8 +1,8 @@
 import {Router} from "./modules/router.js";
+import Navbar from "./components/Navbar/Navbar.js";
+import navbar from "./components/Navbar/Navbar.js";
 
-const navbarElement = document.querySelector('#navbar');
-navbarElement.innerHTML = Handlebars.templates.navbar();
-const rootElement = document.querySelector('#root');
-rootElement.innerHTML = "<a id=\"plink\" href=\"/profil1\">your page</a>";
+navbar();
 const router = new Router();
-router.goTo();
+window.router = router;
+router.goTo('/login');
